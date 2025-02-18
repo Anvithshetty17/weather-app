@@ -2,50 +2,59 @@
 body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
-   
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
     transition: background 1s ease-in-out;
-   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
 /* Header */
 header {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 15px;
-    font-size: 20px;
-    width: 100%;
+    padding: 20px 0;
+    font-size: 26px;
     text-align: center;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 /* Weather Container */
 .weather-container {
-    width: 110%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 450px;
     height: auto;
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+    position: relative;
 }
 
 /* Weather Box */
 .weather-box {
     width: 100%;
-    background: rgba(255, 255, 255, 0.15);
-    padding: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
     border-radius: 20px;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(20px);
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
     transition: background 0.5s ease-in-out;
+    border: 2px solid rgba(255, 255, 255, 0.15);
 }
 
 /* Inputs and Buttons */
 input, button {
-    margin: 10px 0;
-    padding: 12px;
+    margin: 15px 0;
+    padding: 14px;
     width: 80%;
     max-width: 320px;
     border: none;
@@ -55,30 +64,36 @@ input, button {
 }
 
 input {
-    background: rgba(255, 255, 255, 0.5); 
-    color: #333; 
+    background: rgba(255, 255, 255, 0.4);
+    color: #333;
     border: 1px solid rgba(255, 255, 255, 0.3);
     outline: none;
     text-align: center;
     font-size: 16px;
+    transition: 0.3s ease;
 }
 
 input::placeholder {
     color: rgba(51, 51, 51, 0.6);
 }
 
+input:focus {
+    background: rgba(255, 255, 255, 0.8);
+}
+
 /* Button Styles */
 button {
-    background: linear-gradient(to right, #ff7e5f, #ff4e2f);
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
     color: white;
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0px 5px 15px rgba(255, 126, 95, 0.4);
     text-transform: uppercase;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 button:hover {
-    background: linear-gradient(to right, #ff4e2f, #ff2a00);
+    background: linear-gradient(45deg, #feb47b, #ff7e5f);
     transform: scale(1.05);
 }
 
@@ -91,27 +106,40 @@ button:hover {
 
 #weather-info h2 {
     margin-bottom: 10px;
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+#weather-info h3 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+#weather-info p {
+    font-size: 16px;
+    font-style: italic;
 }
 
 #weather-info img {
-    width: 80px;
-    height: 80px;
-    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
     border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
 footer {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 15px;
-    width: 100%;
+    padding: 10px;
     font-size: 14px;
     text-align: center;
-    margin-top: auto;
+    margin-top: 30px;
+    width: 100%;
+    font-weight: 400;
 }
 
 /* Background Animation */
@@ -129,12 +157,9 @@ footer {
 /* Weather Icon Animation */
 .weather-icon-animation {
     position: absolute;
-    width: 290px;
-    height: 400px;
-    margin-right: 52%;
-    margin-left: auto;
+    width: 100px;
+    height: 100px;
     opacity: 0.7;
-    z-index: -1;
     animation: floatUp 5s infinite linear;
 }
 
@@ -164,8 +189,37 @@ footer {
     }
 
     #weather-info h2 {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     button {
-        font-size: 14
+        font-size: 14px;
+    }
+}
+
+/* Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .weather-container {
+        padding: 15px;
+    }
+
+    .weather-box {
+        padding: 15px;
+    }
+
+    input, button {
+        width: 100%;
+    }
+
+    #weather-info h2 {
+        font-size: 20px;
+    }
+
+    #weather-info h3 {
+        font-size: 30px;
+    }
+}
