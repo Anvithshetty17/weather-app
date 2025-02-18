@@ -1,12 +1,12 @@
 /* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    
+    margin: 0;
+    padding: 0;
     background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
     transition: background 1s ease-in-out;
 
-    
-    height: 100vh; 
+    height: 100vh; /* Ensures the body takes full height of the viewport */
  
 }
 
