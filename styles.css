@@ -132,7 +132,7 @@ button:hover {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 }
 main{
-
+min-height:507px;
     text-align: center;
 }    
 
