@@ -41,7 +41,11 @@ header {
     margin-bottom: auto;
 }
 
-
+br{
+    
+    background:linear-gradient(135deg, #ffffff, #e0e0e0);
+ 
+}
 .weather-box {
     width: 100%;
     background: rgba(255, 255, 255, 0.1);
