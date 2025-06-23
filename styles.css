@@ -1,102 +1,261 @@
-/* Reset some default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to right, #83a4d4, #b6fbff);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: #333;
+    font-family: 'Poppins', sans-serif;
+  
+    background:linear-gradient(135deg, #ffffff, #e0e0e0);
+    transition: background 1s ease-in-out;
+margin: 0;
+    height: 100vh; 
+  
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
 }
+
 
 header {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
-  border-bottom: 2px solid #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 0; 
+    font-size: 26px;
+    text-align: center;
+   
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+    letter-spacing: 1px;
+
 }
 
-header h1 {
-  font-size: 2.5rem;
-  color: #2c3e50;
-}
-
-main {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-}
 
 .weather-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  background: rgba(255, 255, 255, 0.3);
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(8px);
-  max-width: 400px;
-  width: 100%;
+    width: 100%;
+    max-width: 450px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
 }
 
-.weather-box input[type="text"] {
-  padding: 0.75rem 1rem;
-  width: 100%;
-  border: none;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  outline: none;
-  margin-bottom: 1rem;
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+br{
+    
+    background:linear-gradient(135deg, #ffffff, #e0e0e0);
+ 
+}
+.weather-box {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(2px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+    transition: background 0.5s ease-in-out;
+    border: 2px solid rgba(255, 255, 255, 0.15);
 }
 
-.weather-box button {
-  background: #3498db;
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
+
+input, button {
+    margin: 15px 0;
+    padding: 14px;
+    width: 80%;
+    max-width: 320px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
 }
 
-.weather-box button:hover {
-  background: #2980b9;
+input {
+    background: rgba(255, 255, 255, 0.4);
+    color: #333;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+    transition: 0.3s ease;
 }
+
+input::placeholder {
+    color: rgba(51, 51, 51, 0.6);
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+
+button {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px rgba(255, 126, 95, 0.4);
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #feb47b, #ff7e5f);
+    transform: scale(1.05);
+}
+
 
 #weather-info {
-  margin-top: 1.5rem;
-  text-align: center;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #2c3e50;
+    margin-top: 20px;
+    font-size: 18px;
+    color: white;
 }
 
-#weather-animation {
-  width: 120px;
-  height: 120px;
-  background: url('https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif') no-repeat center center;
-  background-size: contain;
+#weather-info h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: 600;
 }
+
+#weather-info h3 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+#weather-info p {
+    font-size: 16px;
+    font-style: italic;
+}
+
+#weather-info img {
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+main{
+min-height:507px;
+    text-align: center;
+}    
 
 footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  background: rgba(255, 255, 255, 0.25);
-  border-top: 1px solid #fff;
-  backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+  
+    margin: 0; 
+}
+
+
+#weather-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 106%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+
+.weather-icon-animation {
+    position: absolute;
+    width: 100px;
+
+    height: 100px;
+    opacity: 0.7;
+    animation: floatUp 5s infinite linear;
+}
+
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh);
+        opacity: 1;
+
+    }
+    100% {
+        transform: translateY(-20vh);
+        opacity: 0;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .weather-box {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    input, button {
+        width: 90%;
+        font-size: 15px;
+    }
+
+    #weather-info h2 {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+       
+        
+    }
+    header{
+        width: 100%;
+        font-size: 21px;
+    }
+
+    .weather-container {
+        width: 90%; 
+        padding: 10px;
+    }
+
+    .weather-box {
+        padding: 15px;
+        border-radius: 12px;
+    }
+    #weather-animation {
+       
+        width: 100%;
+   
+       
+    }
+    input, button {
+        width: 80%;
+        font-size: 14px; 
+    }
+
+    #weather-info h2 {
+        font-size: 20px;
+    }
+
+    #weather-info h3 {
+        font-size: 30px; 
+    }
+
+    footer {
+        font-size: 10px;
+        padding: 8px;
+       
+    }
 }
