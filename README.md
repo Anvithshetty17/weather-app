@@ -52,7 +52,7 @@ cd weather-app
 
 ## 📸 Screenshots
 
-_Add screenshots of your app UI here_
+
 
 ## 📌 TODO
 
